@@ -1,4 +1,16 @@
 h1 {
-color:red;
-backgroundcolor:blue;
+color:black;
+font-weight: bold;
+margin: auto;
+text-align: center;
+}
+
+.name{
+	font-size: 1.9em;
+	font-weight: bold;
+	color: black;
+}
+
+body {
+background-color:#ADD8E6;
 }
