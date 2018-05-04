@@ -2,10 +2,18 @@
 
 {% block content %}
 
-<h1>Zoo List</h1>
+ <h2>Hello Please Select Your Zoo</h2>
+
+<div class="dropdown"></div>
+ <button onclick="myFunction()" class="dropbutton">Select</button>
+ <div id="myDropDown" class="dropdown-content">
+   {% for zoo in zoo_list %}
+     <a href="{{ zoo.get_absolute_url }}">{{ zoo.name }}</a>
+   {% endfor %}
+ </div>
+</div>
 
 {% for zoo in zoo_list %}
- <p class="name">{{ zoo.name }}</p>
  <p class="background"></p>
 {% endfor %}
 

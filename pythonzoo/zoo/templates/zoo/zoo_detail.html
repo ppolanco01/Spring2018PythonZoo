@@ -4,4 +4,12 @@
 
 <h1>Zoo Detail for {{ zoo.id }} - {{ zoo.name }}</h1>
 
+<h1>Image</h1>
+{% load static %}
+<img class="picture" src="{% static zoo.logoFileName %}">
+
+{% for exhibit in zoo.exhibit_set.all %}
+ <p>{{ exhibit.name }} - <a href="{{ exhibit.get_absolute_url }}">{{exhibit.name}}</a></p>
+{% endfor %}
+
 {% endblock %}

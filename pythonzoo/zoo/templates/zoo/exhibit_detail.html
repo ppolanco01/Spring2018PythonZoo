@@ -7,13 +7,13 @@
 <h1>Neighbors</h1>
 
 {% for neighbor in exhibit.fromExhibit.all %}
- <p>{{ neighbor.direction }} to {{ neighbor.toExhibit.name }}</p>
+ <p>{{ neighbor.direction }} to <a href="{{neighbor.toExhibit.get_absolute_url}}">{{ neighbor.toExhibit.name }}</a></p>
 {% endfor %}
 
 <h1>Animals</h1>
 
 {% for animal in exhibit.animal_set.all %}
- <p>{{ animal.name }}</p>
+ <p><a href="{{animal.get_absolute_url}}"> {{ animal.name }}</a></p>
 {% endfor %}
 
 

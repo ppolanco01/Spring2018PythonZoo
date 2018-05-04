@@ -12,11 +12,12 @@
   <!-- Add additional CSS in static file -->
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script src="{% static 'javascript/button.js' %}"></script>
 </head>
 
 <body>
 	
 	<h1>This is the navigation bar</h1>
-	<p>Contact Us</p>
+	<p class="communication">Contact About</p>
 	{% block content %}{% endblock %}</body>
 </html>
