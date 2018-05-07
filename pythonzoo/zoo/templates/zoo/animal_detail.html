@@ -5,8 +5,18 @@
 <h1>Animal Detail for {{ animal.id }} - {{ animal.name }} in
   {{ animal.exhibit.name }} in {{ animal.exhibit.zoo.name }}</h1>
 
-<h1>Image</h1>
 {% load static %}
-<img src="{% static animal.imageFileName %}">
+<img class="photo" src="{% static animal.imageFileName %}">
+
+<h3>Food the {{ animal.name }} eats the most:</h3>
+{{ animal.food }}
+
+<h3>Tricks the {{animal.name }} can do:</h3>
+{{ animal.trick }}
+
+<h3>Sound the {{animal.name }} makes:</h3>
+{{ animal.sound }}
+
+<h3><a class="Back" href="{{ animal.exhibit.get_absolute_url }}">Back</a></h3>
 
 {% endblock %}

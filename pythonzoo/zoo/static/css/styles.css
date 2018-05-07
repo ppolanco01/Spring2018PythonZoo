@@ -22,7 +22,7 @@ cursor: pointer;
 }
 
 .dropbutton:hover, .dropbutton:focus {
-background-color:red;
+background-color:black;
 }
 
 .dropdown {
@@ -33,7 +33,7 @@ display: inline-block;
 .dropdown-content {
 display: none;
 position: absolute;
-background-color: white;
+background-color: lightblue;
 min-width: 160px;
 }
 
@@ -44,7 +44,7 @@ text-decoration: none;
 display: block;
 }
 
-.dropdown-content a:hover {background-color: white;}
+.dropdown-content a:hover {background-color: black;}
 
 .show {display:block;}
 
@@ -61,6 +61,13 @@ word-spacing: 30px;
 
 .picture {
 width:600px;
+margin-left: auto;
+margin-right: auto;
+display: block;
+}
+
+.photo {
+width:500px;
 margin-left: auto;
 margin-right: auto;
 display: block;

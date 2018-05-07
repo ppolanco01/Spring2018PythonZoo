@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
-  {% block title %}<title>Local Library</title>{% endblock %}
+  {% block title %}<title>Welcome to Caleb's Zoo Site Boo Thang!</title>{% endblock %}
+  {% load static %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="{% static 'images/zoo.ico' %}" type="image/x-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-  <!-- Add additional CSS in static file -->
-  {% load static %}
+
+
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   <script src="{% static 'javascript/button.js' %}"></script>
 </head>
 
 <body>
-	
-	<h1>This is the navigation bar</h1>
-	<p class="communication">Contact About</p>
-	{% block content %}{% endblock %}</body>
+  <ul>
+    <a href="/zoo/contactus"><li>Contact Us</li></a>
+
+    <a href="/zoo/aboutus"><li>About Us</li></a>
+  </ul>
+  <br>
+  <br>
+  <hr>
+  {% block content %} {% endblock %}
+</body>
+
 </html>
