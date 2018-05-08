@@ -12,10 +12,16 @@
 {{ animal.dietDescription}}
 
 <h3>Tricks the {{animal.name }} can do:</h3>
-{{ animal.trick }}
+{{ animal.tricksDescription}}
 
 <h3>Sound the {{animal.name }} makes:</h3>
-{{ animal.sound }}
+{% if animal.soundFileName %}
+	<audio controls>
+		<source src="{% static animal.soundFileName %}" type="audio/mpeg">
+	</audio>
+{% else %}
+	<p>This animal doesnt make a sound</p>
+{% endif %}
 
 <h3><a class="Back" href="{{ animal.exhibit.get_absolute_url }}">Back</a></h3>
 
